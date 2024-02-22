@@ -1,12 +1,14 @@
-import React, { useState } from 'react'
-import styled from 'styled-components'
-import downArrow from '../assets/images/downArrow.png'
+import React, { useState } from "react";
+import styled from "styled-components";
+import downArrow from "../assets/images/downArrow.png";
 
 const AccordionWrapper = styled.div`
   margin-top: 20px;
   margin-left: 100px;
   margin-right: 100px;
-`
+  max-width: 900px;
+  width: 80%;
+`;
 
 const AccordionHeader = styled.button`
   display: flex;
@@ -29,18 +31,21 @@ const AccordionHeader = styled.button`
   &:hover {
     background-color: #e5e5e5;
   }
-`
+`;
 
 const AccordionContent = styled.div`
   padding: 10px;
-`
+  max-width: max-content;
+  text-align: center;
+  font-size: larger;
+`;
 
 const Accordion = ({ title, content }) => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleAccordion = () => {
-    setIsOpen(!isOpen)
-  }
+    setIsOpen(!isOpen);
+  };
 
   return (
     <AccordionWrapper>
@@ -50,7 +55,7 @@ const Accordion = ({ title, content }) => {
       </AccordionHeader>
       {isOpen && <AccordionContent>{content}</AccordionContent>}
     </AccordionWrapper>
-  )
-}
+  );
+};
 
-export default Accordion
+export default Accordion;

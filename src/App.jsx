@@ -45,14 +45,25 @@ function App() {
         ref={topRef}
         style={{
           backgroundImage: `url(${image})`,
-          backdropFilter: theme === "dark" ? "invert(100%)" : "invert(0%)",
+          backdropFilter:
+            theme === "dark" ? "invert(100%) grayscale(100%)" : "invert(0%)",
         }}
       >
         {/* <button onClick={() => open()}>open Wallet</button> */}
         {/* <w3m-button /> */}
         <Navbar tr={topRef} rr={roadmapRef} fr={faqRef} />
         <HeroSection sectionRef={roadmapRef} />
-        <div ref={faqRef}>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            // maxWidth: "900px",
+            // width: "100%",
+            alignContent: "center",
+            alignItems: "center",
+          }}
+          ref={faqRef}
+        >
           {Data.map((item, index) => {
             return (
               <Accordion

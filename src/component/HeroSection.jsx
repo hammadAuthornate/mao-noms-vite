@@ -201,9 +201,11 @@ export default function HeroSection({ sectionRef }) {
             <Spacer height={"35px"} />
           </div>
           <Spacer height={"35px"} />
-          <div className="d-flex  justify-content-center">
-          <ConnectButton />
+          <div className="d-flex justify-content-center ">
+            <ConnectButton />
           </div>
+          <Spacer height={"35px"} />
+
           <div className="d-flex w-100 justify-content-center">
             {Date.now() >= 1687363200000 ? (
               <Button

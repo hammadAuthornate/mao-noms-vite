@@ -21,6 +21,7 @@ createWeb3Modal({
   chains: [mainnet],
   projectId,
   enableAnalytics: true, // Optional - defaults to your Cloud configuration
+  themeMode: "dark",
 });
 
 export default function ConnectButton() {

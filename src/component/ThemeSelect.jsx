@@ -40,7 +40,7 @@ export default function ThemeSelect() {
             handleClose();
           }}
         >
-          <DarkModeIcon /> Dark
+          <DarkModeIcon style={{ marginRight: "10px" }} /> Dark
         </MenuItem>
         <MenuItem
           onClick={() => {
@@ -48,16 +48,16 @@ export default function ThemeSelect() {
             handleClose();
           }}
         >
-          <Brightness4Icon /> Light
+          <Brightness4Icon style={{ marginRight: "10px" }} /> Light
         </MenuItem>
-        <MenuItem
+        {/* <MenuItem
           onClick={() => {
             setTheme("custom");
             handleClose();
           }}
         >
           Custom
-        </MenuItem>
+        </MenuItem> */}
       </Menu>
     </div>
   );
